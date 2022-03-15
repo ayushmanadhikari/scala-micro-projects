@@ -52,12 +52,13 @@ object leapYear extends App {
     }
 
     def shouting(s: String): Boolean = s.toUpperCase() == s
-    def question(s: String): Boolean = s.takeRight(1) == '?'
+    def question(s: String): Boolean = s.takeRight(1) == "?"
 
   }
 
   val bob = new Bob
-  bob.statementType("what up?")
+  bob.statementType("WHAT UP?")
+
 
 
 
