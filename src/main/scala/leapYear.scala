@@ -55,11 +55,18 @@ object leapYear extends App {
     def question(s: String): Boolean = s.takeRight(1) == "?"
 
   }
-
   val bob = new Bob
   bob.statementType("WHAT UP?")
 
+  val numberList = List(1,2,3,4,5)
+  val lettersList = List('a','b','c','d','e')
 
-
+  val ratings = Map(
+    'a' -> 1,
+    'b' -> 2,
+    'c' -> 3
+  )
+  
+  println(ratings)
 
 }
