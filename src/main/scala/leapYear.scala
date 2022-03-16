@@ -60,4 +60,25 @@ object leapYear extends App {
 
 
 
+  //converting a decimal into a secret handshake
+
+  //converting decimal into binary
+  val inputDecimal:Int = 4
+
+  def decimalToBinary(ip: Int): Unit = {
+    var quotient: Int = ip
+    var flag: Boolean = true
+    var zeroOneSeq: List[Int] = List()
+    while (flag) {
+      var remainder0or1: Int = quotient % 2
+      quotient = quotient/2
+      zeroOneSeq :+ remainder0or1
+      println(zeroOneSeq)
+      if (quotient == 0 | 1) break
+    }
+  }
+  decimalToBinary(4)
+
+
+
 }
