@@ -43,12 +43,12 @@ object leapYear extends App {
   class Bob {
     def statementType(s: String): Unit = {
       val response = s match {
-        case s1 if s.isEmpty => "Fine. Be that way!"
-        case s1 if shouting(s) => "Calm down, I know what i'm doing"
-        case s1 if question(s) => "Sure."
+        case s if s.isEmpty => "Fine. Be that way!"
+        case s if shouting(s) => "Calm down, I know what i'm doing"
+        case s if question(s) => "Sure."
         case _ => "Whatever."
       }
-      print(response)
+      println(response)
     }
 
     def shouting(s: String): Boolean = s.toUpperCase() == s
@@ -56,17 +56,8 @@ object leapYear extends App {
 
   }
   val bob = new Bob
-  bob.statementType("WHAT UP?")
+  bob.statementType("WHAT sP?")
 
-  val numberList = List(1,2,3,4,5)
-  val lettersList = List('a','b','c','d','e')
 
-  val ratings = Map(
-    'a' -> 1,
-    'b' -> 2,
-    'c' -> 3
-  )
-  
-  println(ratings)
 
 }
