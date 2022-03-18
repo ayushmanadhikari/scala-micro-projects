@@ -59,7 +59,6 @@ object leapYear extends App {
   bob.statementType("WHAT sP?")
 
 
-
   //converting a decimal into a secret handshake
 
   //converting decimal into binary
@@ -74,7 +73,7 @@ object leapYear extends App {
       quotient = quotient/2
       zeroOneSeq :+ remainder0or1
       println(zeroOneSeq)
-      if (quotient == 0 | 1) break
+      if (quotient == 0 | 1) 
     }
   }
   decimalToBinary(4)
