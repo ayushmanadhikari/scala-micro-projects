@@ -1,10 +1,12 @@
+import scala.util.control.Breaks.break
+import scala.math.pow
 object leapYear extends App {
 
 
   //finding if a given number is Leap Year or Not
-  implicit class leaOrNot(arg: Int) {
+  implicit class leapOrNot(arg: Int) {
     var isLeap = false
-    def isLeapoOrNot() {
+    def isLeapOrNot() {
       if (arg % 4 == 0 && arg % 100 == 0 && arg % 400 == 0) {isLeap = true}
       else {isLeap = false}
     print(isLeap)}
@@ -62,22 +64,52 @@ object leapYear extends App {
   //converting a decimal into a secret handshake
 
   //converting decimal into binary
-  val inputDecimal:Int = 4
+  //needs fixing
+ def decToBin(x: Int): Double = {
+   var rem = x%2
+   var quo = x/2
+   var finalBin: Double = rem
+   var flag: Boolean = true
+   var count = 1
+   while (flag == true) {
+     rem = quo%2
+     quo = quo/2
+     var power = pow(10, count)
+     finalBin = finalBin + 1*power
+     count = count + 1
+     if (quo==1 | quo == 0) flag=false
+   }
+   finalBin
+ }
+  val x = decToBin(4)
+  println(x)
 
-  def decimalToBinary(ip: Int): Unit = {
-    var quotient: Int = ip
-    var flag: Boolean = true
-    var zeroOneSeq: List[Int] = List()
-    while (flag) {
-      var remainder0or1: Int = quotient % 2
-      quotient = quotient/2
-      zeroOneSeq :+ remainder0or1
-      println(zeroOneSeq)
-      if (quotient == 0 | 1) 
-    }
+
+  //inbuilt function to convert decimal to binary
+  val inputDecimal = 10
+  val binary = inputDecimal.toBinaryString.toInt
+
+  val secretHandshake = binary match {
+    case 1 => "wink"
+    case 10 => "double blink"
+    case 100 => "close your eye"
+    case 1000 => "jump"
+    case _ => //calling a func
   }
-  decimalToBinary(4)
 
+  def binarySplit(x: Int): Int = {
+    var flag = true
+    while (flag) {
+      var binarySplitList: List[Int] = List()
+      var quo = x/10
+      var rem = x%10
+      
+      if (quo ==0 | quo ==1) break()
+
+    }
+
+    x
+  }
 
 
 }
